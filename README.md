@@ -42,4 +42,10 @@ Caso você tenha subido as VMs antes desta configuração, reprovisione para apl
 vagrant reload control --provision
 vagrant reload node1 --provision
 vagrant reload node2 --provision
+
+```
+## Meu ambiente
+
+Este projeto faz parte dos meus estudos DevOps.
+
 ```
