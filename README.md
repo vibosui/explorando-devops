@@ -47,5 +47,3 @@ vagrant reload node2 --provision
 ## Meu ambiente
 
 Este projeto faz parte dos meus estudos DevOps.
-
-```
