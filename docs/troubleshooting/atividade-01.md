@@ -1,4 +1,3 @@
-\
 # Atividade Guiada 01 — Registro de Empecilhos e Troubleshooting
 
 > Registro dos problemas encontrados durante a preparação e execução da primeira atividade de DevOps, com foco no raciocínio de diagnóstico, causa, correção e validação.
