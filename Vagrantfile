@@ -82,7 +82,7 @@ EOF
     node2.vm.hostname = "node2"
     node2.vm.network "private_network", ip: "192.168.56.12"
     node2.vm.provider "virtualbox" do |vb|
-      vb.memory = "512"
+      vb.memory = "1024"
     end
 
     # Garante login SSH por senha para ambiente de laboratório com Ansible
