@@ -1,0 +1,41 @@
+---
+- name: Instalar e configurar Apache no node1
+  hosts: node1
+  become: true
+
+  tasks:
+    - name: Atualizar cache de pacotes
+      apt:
+        update_cache: true
+
+    - name: Instalar o Apache
+      apt:
+        name: apache2
+        state: present
+
+    - name: Garantir que o Apache está iniciado e habilitado
+      service:
+        name: apache2
+        state: started
+        enabled: true
+
+    - name: Criar página HTML personalizada
+      copy:
+        dest: /var/www/html/index.html
+        content: |
+          <html>
+            <body>
+              <h1>Servidor provisionado pelo Ansible - Aula 01</h1>
+              <p>node1 - Apache funcionando!</p>
+            </body>
+          </html>
+        owner: www-data
+        group: www-data
+        mode: "0644"
+      notify: Reiniciar Apache
+
+  handlers:
+    - name: Reiniciar Apache
+      service:
+        name: apache2
+        state: restarted
